@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginRight="10dp"
+      android:background="@drawable/shape_label_unselect"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="10dp"
+          android:text="更多"
+          android:textColor="#BF0B22"
+          android:textSize="14sp" />
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="20dp"
+          android:src="@mipmap/arrow_red" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_biaoqian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+
+        android:layout_marginBottom="10dp"></android.support.v7.widget.RecyclerView>
+    <!--     android:background="@android:color/white"-->
+  </LinearLayout>
+
+  <CheckBox
+      android:id="@+id/cb_check"
+      android:layout_width="40dp"
+      android:layout_height="40dp" />
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/recycle_liebiao"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:background="@android:color/white"></android.support.v7.widget.RecyclerView>
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:background="@drawable/shape_normal_white"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+
+        android:layout_marginLeft="15dp"
+
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="已选购4件" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_normal_rebgl"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+
+  </LinearLayout>
+
+</LinearLayout>

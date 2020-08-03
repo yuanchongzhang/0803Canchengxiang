@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.jakewharton.butterknife'
+android {
+//    compileSdkVersion 30
+//    buildToolsVersion "30.0.1"
+    compileSdkVersion 28
+//    buildToolsVersion "30.0.1"
+    defaultConfig {
+        applicationId "com.mingmen.canting"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+  compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    signingConfigs {
+        /**
+         * 设置你的keystore相关
+         * demo中只是一个示例，使用时请根据实际情况进行配置
+         */
+        debug {
+            //keystore中key的别名
+            keyAlias '123456'
+            //keystore中key的密码
+            keyPassword '123456'
+            //keystore的文件路径，可以是绝对路径也可以是相对路径
+            storeFile file('E:/CompanyProject/0720Canting/CanTing/123456.jks')
+            //keystore的密码
+            storePassword '123456'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation('android.arch.persistence.room:runtime:1.0.0') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.android.support:recyclerview-v7:25.3.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.1'
+    implementation 'com.alibaba:fastjson:1.2.70'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation 'com.android.support:design:25.3.1'
+    implementation files('libs/AMap_Search_V7.3.0_20200331.jar')
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+//    implementation 'com.github.lovetuzitong:MultiImageSelector:1.2'
+    implementation 'com.lzy.widget:imagepicker:0.6.1'  //指定版本
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation 'com.jude:easyrecyclerview:4.4.0'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+/*    implementation 'com.github.Ccapton:BottomDialog:1.0.0'*/
+}

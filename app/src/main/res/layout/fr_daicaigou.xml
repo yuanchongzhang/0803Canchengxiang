@@ -1,0 +1,319 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+  <LinearLayout
+      android:id="@+id/toplayout"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:orientation="horizontal"
+      android:visibility="visible">
+
+    <Button
+        android:id="@+id/btn_calead"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="编辑" />
+
+    <EditText
+        android:id="@+id/edt_starttime"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:background="#E7E7E7"
+        android:clickable="true"
+        android:drawableRight="@drawable/icon_date"
+        android:drawablePadding="5dp"
+        android:focusable="false"
+        android:gravity="center"
+        android:hint="起始日期"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="#191919"
+        android:textColorHint="#959595"
+        android:textSize="16sp" />
+
+    <!-- <com.haibin.calendarview.CalendarView
+         android:id="@+id/calendarview"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@drawable/shape_calendar_dialog"
+         app:calendar_height="46dp"
+         app:current_month_lunar_text_color="#CFCFCF"
+         app:current_month_text_color="@color/colorTextGray"
+         app:min_year="2004"
+         app:month_view="per.chen.demo.calendardialog.SimpleMonthView"
+         app:other_month_text_color="#e1e1e1"
+         app:scheme_text_color="@color/colorTextGray"
+         app:scheme_theme_color="@color/colorTheme"
+         app:selected_text_color="#fff"
+         app:selected_theme_color="@color/colorTheme"
+         app:week_background="#fff"
+         app:week_text_color="@color/colorTextPre"
+         app:week_view="per.chen.demo.calendardialog.SimpleWeekView"
+         app:year_view_day_text_color="@color/colorTextGray"
+         app:year_view_day_text_size="9sp"
+         app:year_view_month_text_color="@color/colorTheme"
+         app:year_view_month_text_size="20sp"
+         app:year_view_scheme_color="@color/colorTheme" />-->
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:layout_gravity="center_vertical"
+      android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:text="2020.09.01  10:30"
+        android:textColor="#C3202D"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="至" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:text="2020.09.01  10:30"
+        android:textColor="#C3202D"
+        android:textSize="14sp" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/lable_selectcanting"
+      android:layout_width="match_parent"
+      android:layout_height="30dp"
+
+
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/shape_normal_rebgl"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:text="采购单详情    "
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="-1dp"
+        android:background="@mipmap/arrow_redright"
+        android:visibility="visible" />
+
+
+  </LinearLayout>
+
+
+  <TextView
+      android:id="@+id/card_title_tv"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:text="代采购"
+      android:textSize="18sp"
+      android:visibility="gone" />
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/toplayout"
+      android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+      <ExpandableListView
+          android:id="@+id/listView"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:scrollbars="none"
+          android:childDivider="@color/black" />
+      <!--  android:background="@color/black"
+        android:dividerHeight="10.0dp"-->
+      <!--分割线-->
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:background="@color/gray" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:gravity="center"
+          android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/all_checkBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.3"
+            android:background="@null"
+            android:button="@null"
+            android:clickable="true"
+            android:drawableLeft="@drawable/checkbox_bg"
+            android:drawablePadding="10dp"
+            android:minHeight="64dp"
+            android:text="全选"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/order_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="20dp"
+              android:layout_weight="0.5"
+              android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="5dp"
+                  android:text="合计 :"
+                  android:textColor="@android:color/black"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:id="@+id/total_price"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="￥0.00"
+                  android:textColor="#ea8010"
+                  android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="不含运费" />
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/go_pay"
+              android:layout_width="0dp"
+              android:layout_height="60dp"
+              android:layout_weight="0.5"
+              android:background="#ea8010"
+              android:gravity="center"
+              android:text="结算(0)"
+              android:textColor="@android:color/white"
+              android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+          <TextView
+              android:id="@+id/share_goods"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="0.3"
+              android:background="#f4c600"
+              android:gravity="center"
+              android:text="分享宝贝"
+              android:textColor="@android:color/white"
+              android:textSize="16sp" />
+
+          <TextView
+              android:id="@+id/collect_goods"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_marginStart="1dp"
+              android:layout_weight="0.3"
+              android:background="@color/ic_taobao"
+              android:gravity="center"
+              android:text="移到收藏夹"
+              android:textColor="@android:color/white"
+              android:textSize="16sp" />
+
+          <TextView
+              android:id="@+id/del_goods"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_marginStart="1dp"
+              android:layout_weight="0.3"
+              android:background="@color/ic_red"
+              android:gravity="center"
+              android:text="删除"
+              android:textColor="@android:color/white"
+              android:textSize="16sp" />
+        </LinearLayout>
+      </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_empty_shopcart"
+        layout="@layout/empty_shopcart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+  </FrameLayout>
+
+
+</LinearLayout>

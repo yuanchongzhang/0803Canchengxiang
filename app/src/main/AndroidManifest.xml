@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mingmen.canting">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- 请求网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 需要运行时注册的权限 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于提高GPS定位速度 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 读取缓存数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 更改设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!--如果设置了target >= 28 如果需要启动后台定位则必须声明这个权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!--如果您的应用需要后台定位权限，且有可能运行在Android Q设备上,并且设置了target>28，必须增加这个权限声明-->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <application
+        android:name="com.mingmen.canting.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme1">
+        <!-- 设置key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="eadf83712d8902541963ec2996045d3c" />
+        <!-- 定位需要的服务 适配Android Q需要加上android:foregroundServiceType="location"
+           android:foregroundServiceType="location"
+        -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name="com.mingmen.canting.MainActivity">
+
+        </activity>
+        <activity android:name="com.mingmen.canting.activity.LoginActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.mingmen.canting.activity.ListActivity" />
+        <activity android:name="com.mingmen.canting.tabuse.ui.SimpleHomeActivity" />
+        <activity
+            android:name="com.mingmen.canting.tabuse.ui.CommonTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mingmen.canting.tabuse.ui.SlidingTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mingmen.canting.tabuse.ui.SegmentTabActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.mingmen.canting.activity.RefreshActivity" />
+
+        <activity android:name="com.mingmen.canting.activity.RegisterActivity"></activity>
+        <activity android:name="com.mingmen.canting.activity.RegisterShenheActivity"></activity>
+        <activity android:name="com.mingmen.canting.activity.ForgetActivity"></activity>
+        <activity
+            android:name="com.mingmen.canting.activity.FilterListActivity"
+            android:theme="@style/activity_dialogStyle"></activity>
+        <activity android:name=".activity.ReplaceFragmentActivity"></activity>
+        <activity android:name=".activity.CheckBoxActivity"></activity>
+        <activity android:name=".activity.Location_Activity"></activity>
+        <activity android:name=".activity.MyNewLocation_Activity"></activity>
+        <activity android:name=".imagepicker.ui.ImageGridActivity"></activity>
+        <activity android:name=".activity.CaiGouActivity"></activity>
+        <activity android:name=".activity.PicSelectActivity"></activity>
+
+
+        <!-- Android 7.0 文件共享配置，必须配置 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.hua.phototest.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/image_picker" />
+        </provider>
+
+        <activity android:name=".activity.CaiGouDanActivity"></activity>
+        <activity android:name=".activity.ZheXianActivity" />
+        <activity
+            android:name=".activity.FilterLoginListActivity"
+            android:theme="@style/activity_dialogStyle" />
+        <activity
+            android:name=".activity.FilterNewLoginListActivity"
+            android:theme="@style/Theme.Android123"></activity>
+        <!--        android:theme="@style/Theme.Android123"-->
+        <activity android:name=".activity.LabelLinkRecyclerActivity"></activity>
+        <activity android:name=".activity.LabelActivity" />
+        <activity
+            android:name=".activity.FilterLoginListBeiFenActivity"
+            android:theme="@style/activity_dialogStyle"></activity>
+        <activity
+            android:name=".activity.FilterZhiWeiActivity"
+            android:theme="@style/activity_dialogStyle"></activity>
+
+        <activity android:name=".zhenban.ZhenBanReplaceFragmentActivity"></activity>
+        <activity
+            android:name=".activity.FilterLoginRestruantActivity"
+            android:theme="@style/activity_dialogStyle"></activity>
+
+        <activity
+            android:name=".activity.YiShenHeActivity"
+            android:theme="@style/activity_dialogStyle"></activity>
+        <activity
+            android:name=".activity.QueRenLingQuActivity"
+            android:theme="@style/activity_dialogStyle"></activity>
+        <activity
+            android:name=".activity.BohuiYuanyinActivity"
+            android:theme="@style/activity_dialogStyle"></activity>
+
+        <activity android:name=".zhenban.DingDanActivity" />
+        <activity
+            android:name=".zhenban.ZhenBanCaiGouDanActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".jingli.JingLiCaiGouDanActivity"></activity>
+        <activity android:name=".chushizhang.ChuShiZhangCaiGouDanActivity"></activity>
+
+        <activity android:name=".zhenban.ZhenBanDingDanActivity"></activity>
+        <activity android:name=".zhenban.ZhenBanXiuGaiActivity" />
+        <activity android:name=".activity.YuCaiGouDanActivity"
+            android:theme="@style/activity_dialogStyle"
+            ></activity>
+
+    </application>
+
+</manifest>

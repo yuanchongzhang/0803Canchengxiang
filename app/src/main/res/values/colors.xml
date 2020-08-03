@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="support_recycler_color_text_gray">#FF777777</color>
+
+    <color name="support_recycler_color_loading_color1">#55777777</color>
+    <color name="support_recycler_color_loading_color2">#B1777777</color>
+    <color name="support_recycler_color_loading_color3">#FF777777</color>
+
+    <color name="divider_color">#B7B2B2</color>
+
+    <color name="btn13">#4681F4</color>
+
+    <color name="black">#000000</color>
+    <color name="touming">#e0F7F7F7</color>
+    <color name="btntextcolor">#ff1E90FF</color><!--dialog中按钮字体颜色 -->
+    <!-- 透明00 半透明e0 -->
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="toumingbai">#99ffffff</color>
+    <color name="touming_mohu">#99000000</color>
+    <color name="bantouming_hongse">#3f701006</color>
+    <color name="bantouming_zise">#3f612175</color>
+    <color name="title_down_zise">#530c69</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#ffe5e5e5</color>
+    <color name="home_back_unselected">#2B2B2B</color>
+    <color name="home_back_selected">#BF2634</color>
+
+    <color name="red_normal">#FF0000</color>
+    <color name="red_pressed">#FF6666</color>
+    <color name="back_register">#282828</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="color_b7b8bd">#b7b8bd</color>
+
+    <color name="tool_bar_color">#303030</color>
+    <color name="bg_color">#303030</color>
+
+    <color name="text_color_white">#FFFFFF</color>
+    <color name="text_bg_gray">#99000000</color>
+
+    <color name="bg_black">#000000</color>
+
+
+    <color name="ic_taobao">#ea8010</color>
+    <color name="ic_yellow">#f4c600</color>
+    <color name="ic_red">#eb4f38</color>
+    <!-- 列表分割线   色值#999999 -->
+    <color name="list_divider">#999999</color>
+    <!-- 选中态色块   色值#D7D7D7 -->
+    <color name="list_item_pressed">#D7D7D7</color>
+
+    <!-- 灰色 -->
+    <color name="grey_color1">#333333</color>
+    <color name="grey_color2">#666666</color>
+    <color name="grey_color3">#999999</color>
+    <!-- 橙色 -->
+    <color name="orange_color">#de6838</color>
+    <!-- 选中日期的背景颜色值 -->
+    <color name="materialcalendar_selected_color">#1A78EC</color>
+    <!-- 当天日期的边框的背景颜色值 -->
+    <color name="materialcalendar_today_border_color">#FF4081</color>
+
+
+    <color name="red">#ea0f1e</color>
+    <color name="light_gray">#efefef</color>
+
+    <color name="deep_gray">#afaeae</color>
+    <color name="deep_gray_2">#636262</color>
+
+    <color name="light_white">#e2e1e1</color>
+    <color name="light_black">#fd383838</color>
+    <color name="canedacolor">#E2E2E2</color>
+
+    <color name="pop_bg_content">#F9F9F9</color>
+    <color name="pop_bg_translucent">#01000000</color>
+    <color name="pop_bg_translucent_half">#70000000</color>
+
+    <color name="pop_item_text_normal_color">#007AFF</color>
+    <color name="pop_item_text_warning_color">#FF3B30</color>
+    <color name="pop_item_bg_pressed">#EBEBEB</color>
+
+
+    <color name="pop_action_sheet_title">#4d4d4d</color>
+    <color name="pop_action_sheet_message">#8f8f8f</color>
+</resources>

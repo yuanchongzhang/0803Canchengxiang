@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/mToolbar"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/qb_px_120"
+      android:background="@color/back_register"
+      app:title=""
+
+      app:titleTextColor="@android:color/white">
+
+
+    <LinearLayout
+        android:id="@+id/linear_return"
+        android:layout_width="80dp"
+        android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/text_return"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:background="@mipmap/circle_toolbar_back" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/text_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="居中"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/img_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:padding="5dp"
+
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/rightbtn"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:text="右边按钮"
+        android:visibility="gone"
+
+        />
+
+  </android.support.v7.widget.Toolbar>
+
+</LinearLayout>
